@@ -16,7 +16,5 @@ The main goal of this project is to:
 - [ ] **Simplified CRUD Operations**: Implement core functionalities for inserting, retrieving, updating, and deleting records.
 - [ ] **Reflection-based Mapping**: Use Java Reflection to parse annotations and link classes to database tables.
 - [ ] **Dynamic SQL Construction**: Generate SQL queries based on Java class structures.
-- [ ] **Connection Pooling**: Efficient management of database connections.
 - [ ] **Transaction Management**: Basic transaction support to ensure data consistency.
-- [ ] **Customizable main.java.Configuration**: Easily adaptable for different database schemas.
 
