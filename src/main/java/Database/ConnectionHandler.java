@@ -11,13 +11,13 @@ public class ConnectionHandler {
     private static ConnectionHandler INSTANCE = null;
     private Connection connection = null;
 
-    private ConnectionHandler() {
+    private ConnectionHandler() throws SQLException, IOException {
+        initializeConnection();
     }
 
     public static ConnectionHandler getInstance() throws SQLException, IOException {
         if (INSTANCE == null){
             INSTANCE = new ConnectionHandler();
-            INSTANCE.getProperties();
         }
         return INSTANCE;
     }
@@ -25,7 +25,7 @@ public class ConnectionHandler {
     public Connection getConnection() throws IOException, SQLException {
             return connection;
     }
-    private void getProperties() throws IOException, SQLException {
+    private void initializeConnection() throws IOException, SQLException {
         if(connection==null){
             Properties properties = LoadProperties.getInstance().getProperty();
             connection = DriverManager.getConnection(properties.getProperty("url"),properties.getProperty("user"),properties.getProperty("password"));
