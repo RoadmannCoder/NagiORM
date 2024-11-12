@@ -27,12 +27,10 @@ public class ConnectionHandler {
     }
     private void getProperties() throws IOException, SQLException {
         if(connection==null){
-            Properties properties = new Properties();
-            FileInputStream fileInputStream = new FileInputStream("src/main/resources/DBconfig.properties");
-            properties.load(fileInputStream);
+            Properties properties = LoadProperties.getInstance().getProperty();
             connection = DriverManager.getConnection(properties.getProperty("url"),properties.getProperty("user"),properties.getProperty("password"));
             Statement statement = connection.createStatement();
-            String sql = "CREATE DATABASE IF NOT EXISTS miniORM";
+            String sql = "CREATE DATABASE IF NOT EXISTS "+properties.getProperty("dbname");
             statement.executeUpdate(sql);
         }
     }

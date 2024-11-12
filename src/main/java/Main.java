@@ -11,6 +11,6 @@ public class Main {
     public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
 
         EntityManager entityManager = new EntityManagerImpl();
-        Connection connection =  ConnectionHandler.getInstance().getConnection();
+
     }
 }
