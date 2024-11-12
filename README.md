@@ -14,7 +14,7 @@ The main goal of this project is to:
 
 - [ ] **Basic main.java.Annotation Mapping**: Custom annotations to mark classes as entities and map fields to database columns.
 - [ ] **Simplified CRUD Operations**: Implement core functionalities for inserting, retrieving, updating, and deleting records.
-- [ ] **Reflection-based Mapping**: Use Java Reflection to parse annotations and link classes to database tables.
+- [x] **Reflection-based Mapping**: Use Java Reflection to parse annotations and link classes to database tables. (DONE)
 - [ ] **Dynamic SQL Construction**: Generate SQL queries based on Java class structures.
 - [ ] **Transaction Management**: Basic transaction support to ensure data consistency.
 
